@@ -4,7 +4,7 @@
     <groupId>com.pxx.tools</groupId>
     <artifactId>pxx-tools</artifactId>
     <packaging>jar</packaging>
-    <version>0.1</version>
+    <version>0.2</version>
     <name>pxx-tools-pom</name>
 
     <properties>
@@ -12,6 +12,22 @@
         <jackson.version>2.8.7</jackson.version>
         <junit.version>4.12</junit.version>
     </properties>
+
+
+    <distributionManagement>
+        <repository>
+            <id>shineio</id>
+            <name>Internal Releases</name>
+            <url>http://nexus.shineio.com:9000/repository/lin/</url>
+        </repository>
+        <snapshotRepository>
+            <id>shineio</id>
+            <name>Internal Releases</name>
+            <url>http://nexus.shineio.com:9000/repository/lin/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
 
     <dependencies>
 
