@@ -1,7 +1,13 @@
 package com.pxx.tools;
 
-/**
- * Created by conglin on 2017/3/15.
- */
+
+import java.util.UUID;
+
 public class Uuid {
+
+    static String generate() {
+        UUID uuid = UUID.randomUUID();
+        return  uuid.toString();
+    }
+
 }
