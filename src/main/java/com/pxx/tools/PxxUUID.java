@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class PxxUUID {
 
-    static String generate() {
+    public static String generate() {
         UUID uuid = UUID.randomUUID();
         return  uuid.toString();
     }
