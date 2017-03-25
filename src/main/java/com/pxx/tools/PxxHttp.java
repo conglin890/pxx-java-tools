@@ -82,4 +82,12 @@ public class PxxHttp {
     }
 
 
+    public void get (String url){
+        // TODO: 2017/3/25  发送无参数get请求
+    }
+
+
+    public void get (String url, Map<String, String> params) {
+        // TODO: 2017/3/25  发送带参数get请求
+    }
 }
