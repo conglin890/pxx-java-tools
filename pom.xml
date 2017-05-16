@@ -4,7 +4,7 @@
     <groupId>com.pxx.tools</groupId>
     <artifactId>pxx-tools</artifactId>
     <packaging>jar</packaging>
-    <version>1.02</version>
+    <version>0.1-SNAPSHOT</version>
     <name>pxx-tools-pom</name>
 
     <properties>
