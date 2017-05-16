@@ -1,4 +1,4 @@
-package com.pxx.tools.http;
+package com.pxx.tools;
 
 
 
@@ -21,16 +21,10 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 /**
- * http  POST GET
+ * http 请求 POST GET
  */
-public class PxxHttpRequest {
-    private static Logger logger = Logger.getLogger(PxxHttpRequest.class);
-
-
-
-    private  CloseableHttpClient httpclient =  HttpClients.createDefault();
-
-
+public class PxxHttp {
+    private static Logger logger = Logger.getLogger(PxxHttp.class);
 
 
     /**
@@ -38,12 +32,13 @@ public class PxxHttpRequest {
      *
      * @param url  请求url
      * @param params  请求参数
-     * @return  String  返回结果文本
+     * @return
      * @throws IOException
      */
     public  String post (String url, Map<String, String> params) throws IOException {
 
 
+        CloseableHttpClient httpclient = HttpClients.createDefault();
 
         HttpPost httpPost = new HttpPost(url);
 
@@ -69,11 +64,12 @@ public class PxxHttpRequest {
      * 发送post请求， 返回body
      *
      * @param url  请求url
-     * @return String  返回结果文本
+     * @return
      * @throws IOException
      */
     public  String post (String url) throws IOException {
 
+        CloseableHttpClient httpclient = HttpClients.createDefault();
 
         HttpPost httpPost = new HttpPost(url);
 
@@ -85,53 +81,13 @@ public class PxxHttpRequest {
 
     }
 
-    /**
-     * 发送post请求， 返回 body
-     *
-     * @param url
-     * @return String  返回结果文本
-     * @throws IOException
-     */
-    public String get (String url) throws IOException {
 
-        HttpGet httpGet = new HttpGet(url);
-
-        CloseableHttpResponse response = httpclient.execute(httpGet);
-
-        HttpEntity entity = response.getEntity();
-
-        return  EntityUtils.toString(entity);
+    public void get (String url){
+        // TODO: 2017/3/25  发送无参数get请求
     }
 
 
-    /**
-     * 发送post请求， 返回 body
-     *
-     * @param url 请求url
-     * @param params  请求参数
-     * @return String  返回结果文本
-     * @throws IOException
-     */
-    public String get (String url, Map<String, String> params) throws IOException {
-
-
-        StringBuilder paramsString = new StringBuilder();
-
-
-        params.forEach( (key, value) -> {
-            paramsString.append(key + "=" + value + "&");
-
-        });
-
-        logger.info(url + "?" +paramsString.toString());
-
-        HttpGet httpGet = new HttpGet(url + "?" +paramsString.toString());
-
-        CloseableHttpResponse response = httpclient.execute(httpGet);
-
-        HttpEntity entity = response.getEntity();
-
-        return  EntityUtils.toString(entity);
-
+    public void get (String url, Map<String, String> params) {
+        // TODO: 2017/3/25  发送带参数get请求
     }
 }
