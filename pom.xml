@@ -96,6 +96,15 @@
         </dependency>
 
 
+
+        <dependency>
+            <groupId>com.vladsch.flexmark</groupId>
+            <artifactId>flexmark-all</artifactId>
+            <version>0.19.4</version>
+        </dependency>
+
+
+
     </dependencies>
 
 
