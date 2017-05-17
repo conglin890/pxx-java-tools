@@ -7,7 +7,7 @@ import java.io.ByteArrayInputStream;
 /**
  * 阿里云 OSS 操作类
  */
-public class Oss {
+public class PxxOss {
 
     private  OSSClient ossClient;
 
@@ -18,7 +18,7 @@ public class Oss {
      * @param accessKeySecret <yourAccessKeySecret>
      * @param endpoint <yourOssEndpoint>
      */
-    public Oss (String accessKeyId, String accessKeySecret, String  endpoint ) {
+    public PxxOss(String accessKeyId, String accessKeySecret, String  endpoint ) {
 
         this.ossClient = new OSSClient(endpoint, accessKeyId, accessKeySecret);
 

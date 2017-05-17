@@ -15,7 +15,7 @@ import java.util.Arrays;
  *
  * note: 使用 flexmark-java
  */
-public  class Markdown {
+public  class PxxMarkdown {
 
     /**
      * Markdown 转换为 html
